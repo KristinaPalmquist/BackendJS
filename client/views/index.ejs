@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Laboration 1</title>
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+    <body>
+        <% const assignment = 'Laboration 1', student = 'Kristina Palmquist',
+        year = 'JSU22' %>
+        <nav>
+            <div id="welcome">
+                <a href="/"><h1>Backend och databaser</h1></a>
+                <p><%= assignment %> - <%= student %> - <%= year %></p>
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat">Chat</a></li>
+                <li><a href="/titles">Titles</a></li>
+                <li><a href="/titles/add">Add new title</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div id="titles" class="content">
+                <h2>All titles</h2>
+            </div>
+        </main>
+        <footer></footer>
+    </body>
+</html>

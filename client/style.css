@@ -1,0 +1,46 @@
+* {
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: bisque;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#welcome {
+    width: 100%;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+#chat {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: antiquewhite;
+    text-align: center;
+}
+#output {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: white;
+    text-align: left;
+}
+
+#add {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: antiquewhite;
+    text-align: center;
+}

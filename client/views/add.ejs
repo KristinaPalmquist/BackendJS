@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Labb 1</title>
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+    <body>
+        <nav>
+            <div id="welcome">
+                <a href="/"><h1>Backend och databaser</h1></a>
+                <p>Laboriation 1 - Kristina Palmquist - JSU22</p>
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat">Chat</a></li>
+                <li><a href="/titles">Titles</a></li>
+                <li><a href="/titles/add">Add new title</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div id="titles" class="content">
+                <h2>All titles</h2>
+            </div>
+            <div id="add" class="content">
+                <h1>Add new book</h1>
+                <form action="http://localhost:5421/title/create" method="POST">
+                    <fieldset>
+                        <legend>Book</legend>
+                        <label for="postedTitle">Title</label>
+                        <input
+                            type="text"
+                            placeholder="Book Title"
+                            name="postedTitle"
+                        />
+                        <label for="postedPublisher">Publisher</label>
+                        <input
+                            type="text"
+                            placeholder="Publishers name"
+                            name="postedPublisher"
+                        />
+                        <label for="postedYear">Year</label>
+                        <input
+                            type="text"
+                            placeholder="Publishing Year"
+                            name="postedYear"
+                        />
+                    </fieldset>
+                    <fieldset>
+                        <legend>Author</legend>
+                        <label for="postedFirstName">First name</label>
+                        <input
+                            type="text"
+                            placeholder="Authors first name"
+                            name="postedFirstName"
+                        />
+                        <label for="postedMiddleName">Middle name</label>
+                        <input
+                            type="text"
+                            placeholder="Authors middle name"
+                            name="postedMiddleName"
+                        />
+                        <label for="postedLastName">Last name</label>
+                        <input
+                            type="text"
+                            placeholder="Authors last name"
+                            name="postedLastName"
+                        />
+                    </fieldset>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+        <footer></footer>
+        <script>
+            const options = {
+                method: 'GET',
+                headers: {
+                    Accept: 'application/json'
+                }
+            }
+
+            printTitleData()
+
+            async function printTitleData() {
+                let data = await getTitleData()
+            }
+
+            async function getTitleData() {
+                const response = await fetch('http://localhost:5421/titl')
+            }
+        </script>
+    </body>
+</html>
